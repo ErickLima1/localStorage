@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/button.css">
+    <title>Crud-LocalStorage</title>
+</head>
+<body>
+    <header>
+        <h1  class="header-title">Salvando Obras</h1>
+    </header>        
+    <main>
+        <a href="test.html"><button class="button">Voltar</button></a>
+        <button type="button" class="button blue mobile" id="cadastrarCliente">Cadastrar Capitulos</button>
+        <div id="toolBar">
+            <h4>Pesquisar:</h4>
+            <form class="form-control">
+                <input type="text" id="search-input" placeholder="buscar">
+            </form>
+            <button id="clear-search" class="button">Limpar busca</button>
+        </div>
+        <table id="tableClient" class="records">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Capitulo</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h2>Novo Clientes</h2>
+                    <span class="modal-close" id="modalClose">&#10006;</span>
+                </header>
+                <form id="form" class="modal-form">
+                    <input type="text" id="nome" data-index="new" 
+                        class="modal-field" placeholder="Nome da obra" required>
+                    <input type="number" id="number" class="modal-field" placeholder="Capitulos" required>
+                </form>
+                <footer class="modal-footer">
+                    <button id="save" class="button green">
+                            Salvar
+                    </button>
+                    <button id="cancel" class="button blue">
+                        Cancelar
+                    </button>
+                </footer>
+            </div>
+        </div>
+    </main>
+    <script src="js/script.js"></script>
+
+</body>
+</html>
